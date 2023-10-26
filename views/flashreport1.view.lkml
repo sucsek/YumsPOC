@@ -20,6 +20,14 @@ view: flashreport1 {
     type: string
     sql: ${TABLE}.longitude ;;
   }
+  ############
+  #Coodinator#
+  ############
+  dimension: location {
+    type: location
+    sql_latitude: ${TABLE}.latitude ;;
+    sql_longitude: ${TABLE}.longitude ;;
+  }
   dimension: mtd_actual {
     type: number
     sql: ${TABLE}.MTD_Actual ;;
