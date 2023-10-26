@@ -48,7 +48,7 @@ view: flashreport1 {
   #Custom X Axis Order Type#
   ##########################
   dimension: custom_sort_column {
-    type: string
+    type: number
     sql: CASE
           WHEN ${actual_name} = 'dinein' THEN 1
           WHEN ${actual_name} = 'delivery' THEN 2
