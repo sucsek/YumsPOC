@@ -13,11 +13,11 @@ view: flashreport1 {
     sql: ${TABLE}.business ;;
   }
   dimension: latitude {
-    type: string
+    type: number
     sql: ${TABLE}.latitude ;;
   }
   dimension: longitude {
-    type: string
+    type: number
     sql: ${TABLE}.longitude ;;
   }
   ############
