@@ -103,7 +103,7 @@ view: flashreport1 {
 ########################
 #Daily Flash Title Date#
 ########################
-  measure: title_date{
+  measure: dfr_title{
     type: string
     sql: CONCAT('Daily Flash Report for ',${business_date}) ;;
     html:
