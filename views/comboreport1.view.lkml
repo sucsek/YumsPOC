@@ -48,4 +48,35 @@ view: comboreport1 {
     type: count
     drill_fields: [storefullname, store_name]
   }
+  ##############
+  #Sum of Count#
+  ##############
+  measure: total_count{
+    type: sum
+    sql_distinct_key: ${menu_item_master_name1};;
+    sql: ${sale_count} ;;
+  }
+
+  ##############
+  #Sum of Sales#
+  ##############
+  measure: total_sales{
+    type: sum
+    sql_distinct_key: ${menu_item_master_name1};;
+    sql: ${sale_total} ;;
+    value_format: "S$#,##0.00"
+  }
+
+  #######
+  #Title#
+  #######
+  measure: title_date{
+    type: string
+    sql: CONCAT('Combo Report',${title}) ;;
+    html:
+    <p style="font-size:30px; text-align:center; line-height:80%;"><i>Pizza Hut Singapore Pte Ltd</i></p>
+    <p style="font-size:30px; text-align:center; line-height:80%;">-----------------------------------------------------------------------------------------------------------------------------</p>
+    <p style="font-size:20px; text-align:center; line-height:80%;">{{ rendered_value }}</p>
+    ;;
+  }
 }
