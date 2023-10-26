@@ -12,3 +12,4 @@ persist_with: yumpoc_default_datagroup
 
 explore: flashreport1 {}
 
+explore: comboreport1 {}
