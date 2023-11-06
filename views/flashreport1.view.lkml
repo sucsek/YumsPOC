@@ -47,6 +47,7 @@ view: flashreport1 {
   dimension: today_actual {
     type: number
     sql: ${TABLE}.Today_Actual ;;
+    value_format: "#,##0.00"
   }
   measure: count {
     type: count
